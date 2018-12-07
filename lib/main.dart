@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/demo/net.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+
     );
   }
 }
@@ -91,6 +93,13 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            RaisedButton(
+            child: new Text("NetPage"),
+              onPressed: () {
+                //跳转到新的 页面我们需要调用 navigator.push方法
+                Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => new NetPage(title:'NetPage')));
+            }),
             Text(
               'You have pushed the button this many times:',
             ),
