@@ -24,9 +24,6 @@ class _NetPageState extends State<NetPage> {
   String curImageUrl = '';
   //使用系统的请求
   var httpClient = new HttpClient();
-
-  var dio_url = 'https://news-at.zhihu.com/api/4/news/latest';
-
   _loadData() async {
     _controller.text='';
     try {
