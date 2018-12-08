@@ -104,7 +104,7 @@ class _NetPageState extends State<NetPage> {
           ),
           new Padding(
             padding: new EdgeInsets.only(left:20.0,  top: 10.0, bottom: 10.0,right:20.0),
-            child: new Image.network(_decodeResult!=null?_decodeResult['image']:''),
+            child: _decodeResult!=null?new Image.network(_decodeResult['image']):new Text('?'),
           ),
         ],
       ),
